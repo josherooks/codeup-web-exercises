@@ -8,9 +8,11 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+
 function sayHello(name) {
-    return (("Hello, ") +  (name) +("!"))
+    return (("Hello, ") +  (name) +("!"));
 }
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -18,8 +20,10 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
+
 let helloMessage = sayHello("Josh")
-console.log(helloMessage)
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -27,9 +31,13 @@ console.log(helloMessage)
  * console.
  */
 
+let myName = "Josh"
+
+console.log(sayHello(myName))
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -48,6 +56,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(num){
+    return num == 2;
+}
+
+console.log(isTwo(random))
 
 /**
  * TODO:
@@ -60,14 +73,18 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+function calculateTip(num){
+    return (percent * total)
+}
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+let total = parseFloat(prompt("What is the bill total?"))
+let percent = parseFloat(prompt("What percentage would you like to tip? (ex 0.20)"))
+alert("You total amount is $" + calculateTip())
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -82,3 +99,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(num){
+    return ( originalPrice - (originalPrice * percentDiscount))
+}
+
+let originalPrice = parseFloat(prompt("What it the original Price?"))
+let percentDiscount = parseFloat(prompt("What is the percent discount?"))
+alert("Your total price is $" + applyDiscount())
