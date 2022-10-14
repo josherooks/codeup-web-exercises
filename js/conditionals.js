@@ -250,5 +250,4 @@ if(doesUserConfirm) {
     playGame();
 }
 
-})
-();
+}());
