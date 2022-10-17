@@ -28,8 +28,8 @@
     let str;
     let newPlanetsArray = [];
     planetsArray.forEach(function (planet){
-        console.log('<li>${planet}</li>');
-        newPlanetsArray.push('<li>${planet}</li>')
+        console.log(`<li>${planet}</li>`);
+        newPlanetsArray.push(`<li>${planet}</li>`)
     })
     console.log(newPlanetsArray);
     newPlanetsArray.unshift("<ul>")
