@@ -36,7 +36,7 @@ let currentShow = prompt("What show are you currently watching?");
 // MINI-EXERCISE!
 
 // TODO: 1. Create two string variables one for password and one for username.
-let username = "jayman";
+let username = "clownbaby";
 let password = "password1";
 // TODO: 2. Create two more variables named userUsername and userPassword that prompt the user to enter in their credentials.
 // let userUsername = prompt("Please enter your username.")
@@ -61,7 +61,7 @@ let password = "password1";
 // }
 
 // Example:
-// username = "jayman"
+// username = "clownbaby"
 // password = "password1"
 
 // IF/ELSE IF/ELSE
