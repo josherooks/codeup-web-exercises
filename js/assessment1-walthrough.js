@@ -61,7 +61,7 @@ function getLowestNumber(num1, num2, num3) {
 }
 
 function addStringLengths(str1, str2) {
-    is(isString(str1) && isString(str2)); {
+    if(isString(str1) && isString(str2)) {
         return str1.length + str2.length
     }
     return false;
