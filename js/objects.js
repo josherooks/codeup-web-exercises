@@ -13,7 +13,7 @@
      */
 let person = {
     firstName: "Joshua",
-    lastName: "Rooks",
+    lastName: "Rooks"
     };
     console.log(person.firstName)
     console.log(person.lastName)
@@ -27,8 +27,10 @@ let person = {
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 person.sayHello = function (){
-    return ("Hello from " + person.firstName + " " + person.lastName + " !")
-};
+    return ("Hello from " + person.firstName + " " + person.lastName + "!");
+    // temperate literal \/
+    // return `Hello from ${person.firstName} ${person.lastName}!`;
+}
 console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -43,8 +45,8 @@ console.log(person.sayHello())
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
-    var shoppers = [
+//My solution
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
@@ -52,14 +54,23 @@ console.log(person.sayHello())
 shoppers.discount = .12
 
     shoppers.forEach(function(shopper){
-        if(shopper.amount >= 200){
-            console.log(shopper.name + " " + shopper.amount + " " + shoppers.discount + " " + ((shopper.amount) - (shopper.amount * shoppers.discount)))
+        if(shopper.amount > 200){
+            console.log(shopper.name + " " + shopper.amount + " " + (shoppers.discount * 100 + "%") + " " + ((shopper.amount) - (shopper.amount * shoppers.discount)))
         } else {
             console.log(shopper.name + " " + (shopper.amount))
         }
 
     })
-
+//Walk through solution
+//     shoppers.forEach(function (shopper){
+//         let discountAmount = (shopper.amount * 0.12).toFixed(2);
+//         let discountTotal = (shopper.amount - discountAmount).toFixed(2);
+//         if(shopper.amount > 200){
+//             console.log(`Hi ${shopper.name}, your previous total was $${shopper.amount}, but you have a discount of $${discountAmount} to bring you to the grand total of ${discountTotal}`);
+//         }else{
+//             console.log(`Hi ${shopper.name}, your total is $${shopper.amount}`);
+//         }
+//     })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -78,7 +89,7 @@ shoppers.discount = .12
         {
             title: "Be Here Now",
             author: {
-                firstName: "Ram Das",
+                firstName: "Ram",
                 lastName: "Das"
             }
         },
@@ -111,7 +122,10 @@ shoppers.discount = .12
                 lastName: "Hogan"
             }
 }
-    ];
+    ]
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[0].author.lastName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -136,13 +150,22 @@ shoppers.discount = .12
      *      ---
      *      ...
      */
+    //My solution
     let bookNum = 0
 books.forEach(function(book){
     bookNum = bookNum + 1;
     console.log("Book # " + bookNum);
     console.log("Title: " + book.title);
     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    console.log("---")
 })
+    //Walk through solution
+    // for(let i = 0; i < books.length; i++){
+    //     console.log(`Book # ${i + 1}`);
+    //     console.log(`Title: ${books[i].title}`);
+    //     console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    //     console.log("---")
+    // }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -153,5 +176,30 @@ books.forEach(function(book){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(bookTitle, author){
+        author = author.split(" ");
+        let book = {
+            title: bookTitle,
+            author: {
+                firstName: author[0],
+                lastName: author[1]
+            }
+        }
+        return book;
+    }
+    books.push(createBook("Dragon ball", "Akira Toriyama"));
+    console.log(books)
 
+    function showBookInfo(book){
+        console.log(`Book # ${books.indexOf(book) + 1}`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+    }
+
+    for (let i = 0; i < books.length; i++){
+        showBookInfo(books[i])
+    }
+
+    // showBookInfo(books[1])
+    // console.log(books[1])
 })();
