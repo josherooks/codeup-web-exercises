@@ -63,13 +63,46 @@
     //
     // Create a function named "typePrinter" that accepts an array as an input, and logs the data type of each element to the console.
 
-        let arr = [true, "Icon", 25, "66", false, 0];
-    function typePrinter(userArr){
-        for(let i = 0; i < userArr.length; i++){
-            console.log(typeof userArr[i])
-        }
+   //      let arr = [true, "Icon", 25, "66", false, 0];
+   //  function typePrinter(userArr){
+   //      for(let i = 0; i < userArr.length; i++){
+   //          console.log(typeof userArr[i])
+   //      }
+   //
+   //  }
+   // typePrinter(arr);
 
-    }
-   typePrinter(arr);
+    //Morning Warm-up 10/20:
+
+    // Warm-Up:
+    //
+    // Create a function named "average" that takes in an array of numeric values, and returns the average. If any of the elements in the array are non-numeric, the function should return false.
+
+
+    // function isNumeric(input) {
+    //     return !isNaN(parseFloat(input));
+    // }
+    //
+    // function average(array) {
+    //     let i = 0;
+    //     let sum = 0;
+    //     while(i < array.length) {
+    //         if (isNumeric(array[i])) {
+    //
+    //             sum += parseFloat(array[i]);
+    //             i++;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    //     return sum / array.length
+    // }
+    // // Ex:
+    // console.log(average(["6", 5, 3, 2, 9]));                       // returns 5
+    // console.log(average([true, 6, 9, 3, 10]));                     // returns false
+    // console.log(average([{name: "Codey the Duck"}, 10, 3, false])); // returns false
+    // console.log(average([1, 2, 3, 4, 5]));                         // returns 3
+    // console.log(average(["5.5", "five", 3, 6, 7]));                // returns false
+
 
 })();
