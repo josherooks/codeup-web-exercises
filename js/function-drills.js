@@ -66,3 +66,29 @@ console.log(isMultipleOfThreeAndFive(17))
 console.log(isMultipleOfThreeAndFive(15))
 console.log(isMultipleOfThreeAndFive("30"))
 
+function isMultipleOf(target, n){
+    return target % n === 0
+}
+
+console.log(isMultipleOf(20, 3))
+console.log(isMultipleOf(30, 10))
+
+function isTrue(boolean){
+    return boolean === true
+}
+
+console.log(isTrue(true))
+console.log(isTrue(false))
+
+function isFalse(boolean){
+    return boolean === false
+}
+
+console.log(isFalse(true))
+console.log(isFalse(false))
+
+function isTruthy(input){
+
+}
+
+

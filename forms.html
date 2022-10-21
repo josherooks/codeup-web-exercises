@@ -5,32 +5,46 @@
     <title>Register With Us</title>
 </head>
 <body>
+<section>
+    <header>
+        <h1>Register With Us</h1>
+    </header>
+</section>
+
 <form method="POST" action="https://request-inspector.glitch.me/">
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" placeholder="Enter email">
-  <label for="password">Password</label>
-  <input type="password" name="password" id="password" placeholder="Enter password">
-  <br>
-  <label for="bio">Bio</label>
-  <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Enter Bio here"></textarea>
-  <br>
-  <label>How did you hear about us?
-  <br>
-  <input type="checkbox" name="hear_about" value="billboard" >Billboard<br>
-  <input type="checkbox" name="hear_about" value="radio" >Radio<br>
-  <input type="checkbox" name="hear_about" value="advertisement" >Advertisement<br>
-  <input type="checkbox" name="hear_about" value="internet advertisement" >Internet Advertisement<br>
-  </label>
-  <br>
-  <label>What internet browser are you using?
-    <select name="internet browser" >
-      <option value="chrome">Google Chrome</option>
-      <option value="safari">Safari</option>
-      <option value="firefox">Firefox</option>
-    </select>
-  </label>
-  <br>
-  <button type="submit">Submit</button>
+    <section>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter email">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+    </section>
+    <br>
+    <section>
+        <label for="bio">Bio:</label><br>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Enter Bio here"></textarea>
+    </section>
+    <br>
+    <section>
+        <label>How did you hear about us?
+            <br>
+            <input type="checkbox" name="hear_about" value="billboard">Billboard<br>
+            <input type="checkbox" name="hear_about" value="radio">Radio<br>
+            <input type="checkbox" name="hear_about" value="advertisement">Advertisement<br>
+            <input type="checkbox" name="hear_about" value="internet advertisement">Internet Advertisement<br>
+        </label>
+    </section>
+    <br>
+    <section>
+        <label for="userBrowser">What internet browser are you using?</label><br>
+            <select id="userBrowser" name="internet browser">
+                <option value="chrome">Google Chrome</option>
+                <option value="safari">Safari</option>
+                <option value="firefox">Firefox</option>
+            </select>
+
+    </section>
+    <br>
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>
