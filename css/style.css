@@ -48,6 +48,9 @@ a:hover {
     color: red;
 
 }
+a:link{
+    color: blue
+}
 
 
 
