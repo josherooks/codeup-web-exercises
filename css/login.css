@@ -13,7 +13,7 @@ body, html {
 form {
     margin: 1em;
     padding: 1em;
-    border: 1em;
+
 
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
@@ -25,7 +25,7 @@ fieldset {
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     padding: 1em;
     background-color: white;
-    border: 0;
+    border: none;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -33,7 +33,7 @@ fieldset {
 
 .width-80 {
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     /* The element with this class should be 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
@@ -58,6 +58,7 @@ fieldset {
 .btn {
     padding: 8px;
     color: white;
+    font-weight: bold;
     border: lightgrey solid 1px;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
