@@ -1,4 +1,62 @@
+
+
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+/* Center the main heading */
+header h1 {
+    text-align: center;
+}
+
+/*Add a style to change the color of the headers on your page and make them underlined.*/
+h2 {
+    color: #008b8b;
+    text-decoration: underline;
+}
+
+/*Add a style to change the background color of the page.*/
+
+html {
+    background-color: #fff0f5;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.*/
+
+.picBackground {
+    background-image: url(/images/mtn-feuld.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Add a style to change the list-style to something other than the default bullet.*/
+ul {
+    list-style-type: square;
+}
+
+/*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+table {
+    font-size: 25px;
+    padding: 20px;
+}
+
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
+/*pseudo */
+a:hover {
+    color: red;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
