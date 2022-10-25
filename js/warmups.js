@@ -104,5 +104,22 @@
     // console.log(average([1, 2, 3, 4, 5]));                         // returns 3
     // console.log(average(["5.5", "five", 3, 6, 7]));                // returns false
 
+    // Warm-up 10/25:
+
+    // Create a function named "filterNegativity" that accepts an array of numbers, and returns an array with only positive numbers.
+
+
+    const filterNegativity = (arr) => {
+        let positiveArr = [];
+        for (let i = 0; i < arr.length; i++){
+            if(arr[i] >= 0) {
+                positiveArr.push(arr[i])
+            }
+        }
+        return positiveArr;
+    }
+
+      console.log(filterNegativity([5,-4, 3, 0]));
+        // Ex: filterNegativity([5, -6, 2, 0, -5, -13]) // returns [5, 2, 0,]
 
 })();
