@@ -81,7 +81,7 @@ a {
 
 .profile-image {
     position: absolute;
-    top: 225px;
+    top: 250px;
 }
 
 .profile-form{
@@ -116,7 +116,7 @@ a {
     overflow: auto;
 }
 .media-image{
-    width: 50px;
+    max-width: 50px;
     float: left;
     margin-top: 1.33em;
 }
@@ -125,7 +125,7 @@ a {
     width: calc(100% - 50px)
 }
 .profile-items{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 .profile-entry{
