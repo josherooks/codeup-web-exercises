@@ -1,7 +1,8 @@
-
+//used in later functions
 function isString(input){
     return typeof input === "string";
 }
+
 function lowerCase(input){
     if(typeof input === "string"){
         return input.toLowerCase();
