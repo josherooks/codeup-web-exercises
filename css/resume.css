@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+}
+
+#contacts ul{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: solid green 3px;
+
+}
