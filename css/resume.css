@@ -13,6 +13,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
+    padding-left: 0;
 
 }
 a:link {
@@ -54,5 +55,6 @@ main{
     #contacts ul{
         display: flex;
         flex-direction: column;
+        padding-left: 0;
     }
 }
