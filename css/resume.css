@@ -16,15 +16,10 @@ header {
     padding-left: 0;
 
 }
+
 a:link {
     text-decoration: none;
     color: black;
-}
-
-
-
-hr {
-    border: solid green 2px;
 }
 
 h3 {
@@ -36,6 +31,7 @@ main{
     flex-direction: row;
     /*align-content: space-between;*/
     flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 .left-column {
