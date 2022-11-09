@@ -24,7 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button id="hideHeader1">Hide Header 1</button>
+<button id="redHeader2">Turn Header 2 red</button>
+<button id="removeBullets">Remove Bullets From List</button>
+<button id="resetButton">Reset Buttons</button>
 <script>
     (function() {
         "use strict";
@@ -58,6 +61,38 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "Mission Accomplished!"
+
+        let hideHeader1 = function(){
+            mainHeader.style.display = "none"
+        };
+        let btn1 = document.getElementById("hideHeader1");
+        btn1.addEventListener("click", hideHeader1)
+
+        let redHeader2 = function(){
+            subHeader.style.color = "red"
+        };
+        let btn2 = document.getElementById("redHeader2");
+        btn2.addEventListener("click", redHeader2)
+
+        let removeBullets = function(){
+            for( let i = 0; i < listItems.length; i++) {
+                listItems[i].style.listStyle = "none"
+            }
+        }
+
+        let btn3 = document.getElementById("removeBullets");
+        btn3.addEventListener("click", removeBullets)
+
+        let reset = function(){
+            mainHeader.style.display = "inline-block";
+            subHeader.style.color = "blue";
+            for( let i = 0; i < listItems.length; i++) {
+                listItems[i].style.listStyle = "disc"
+            };
+        }
+
+        let btn4 = document.getElementById("resetButton")
+        btn4.addEventListener("click", reset)
     })();
 </script>
 </body>
