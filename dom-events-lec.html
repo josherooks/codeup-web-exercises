@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="htmlFile">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,8 +8,87 @@
     <title>Document</title>
 </head>
 <body>
-<script>
+<h1 id="header">COW RATING WEBSITE! Mootacular</h1>
 
+<div>
+    <img id="cow1" src="img/cow1.png" alt="cow1">
+    <h2 id="cow1Win">You like me(cowtastic)</h2>
+    <h2 id="cow1Loss">You like me not :(</h2>
+    <button id="cow1Like">Like</button>
+    <button id="cow1Dislike">Dislike</button>
+</div>
+
+<div>
+    <img id="cow2" src="img/cow-puppy.jpeg" alt="cow2">
+    <h2 id="cow2Win">You like me(mootastic)</h2>
+    <h2 id="cow2Loss">You like me not :(</h2>
+    <button id="cow2Like">Like</button>
+    <button id="cow2Dislike">Dislike</button>
+</div>
+
+<button type="button" id="dark-mode">cow mode! Moo on</button>
+<button type="button" id="disable-btn">Disable cow mode! See you at WHAB!</button>
+<script>
+    let h2 = document.getElementsByTagName("h2");
+    for(let i = 0; i < h2.length; i++){
+        h2[i].style.display = 'none';
+    }
+
+    //ADDED DARK MODE
+    //selected button element by ID
+    let btn = document.getElementById("dark-mode");
+    // button has click event attached
+    let darkModeTrigger = function (){
+        console.log('event listener fired off');
+        let html = document.getElementById('htmlFile');
+        html.style['background-color'] = 'black';
+        html.style.color = 'white';
+    }
+    btn.addEventListener('mouseover', darkModeTrigger);
+    let exitDarkMode = function (){
+        let html = document.getElementById('htmlFile');
+        html.style['background'] = "white";
+        html.style['color'] = "black";
+    }
+    btn.addEventListener('mouseout', exitDarkMode);
+
+    // let likeCow1 = document.getElementById('cow1Like');
+    // let likeCow2 = document.getElementById('cow2Like');
+    // let dislikeCow1 = document.getElementById('cow1Dislike');
+    // let dislikeCow2 = document.getElementById('cow2Dislike');
+    //
+    // likeCow1.addEventListener('click', function (){
+    //     console.log("event fired off")
+    //     let cow1Message = document.getElementById('cow1Win');
+    //     cow1Message.style.display = 'block';
+    //     let cow1MessageLoss = document.getElementById('cow1Loss');
+    //     cow1MessageLoss.style.display = 'none';
+    //
+    // });
+    // dislikeCow1.addEventListener('click', function (){
+    //     console.log("event fired off")
+    //     let cow1Message = document.getElementById('cow1Loss');
+    //     cow1Message.style.display = 'block';
+    // });
+    // likeCow2.addEventListener('click', function (){
+    //     console.log("event fired off")
+    //     let cow1Message = document.getElementById('cow2Win');
+    //     cow1Message.style.display = 'block';
+    // });
+    // dislikeCow2.addEventListener('click', function (){
+    //     console.log("event fired off")
+    //     let cow1Message = document.getElementById('cow2Loss');
+    //     cow1Message.style.display = 'block';
+    // });
+
+    let disable = function () {
+        console.log("events removed...")
+        btn.removeEventListener('mouseover', darkModeTrigger);
+        btn.removeEventListener("mouseout", exitDarkMode);
+    }
+
+    let disableBtn = document.getElementById('disable-btn');
+    disableBtn.addEventListener('click', disable)
 </script>
 </body>
 </html>
