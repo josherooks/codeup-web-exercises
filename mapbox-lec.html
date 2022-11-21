@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 70%;
+      height: 450px;
+    }
+  </style>
 </head>
 <body>
-$END$
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src="js/keys.js"></script> <!-- bring in keys file first -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+
+<!-- Custom JS -->
+<!-- Put this into your js file-->
+<script>
+  mapboxgl.accessToken = MAPBOX_TOKEN; <!-- add in mapbox token -->
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 12,
+    center: [-96.80326973598717, 32.77802470416557]
+  });
+
+//adding a marker
+  var marker = new mapboxgl.Marker()
+          .setLngLat([-96.80326973598717, 32.77802470416557])
+          .addTo(map);
+
+  //adding a popup
+  var popup = new mapboxgl.Popup()
+          .setLngLat([-96.80326973598717, 32.77802470416557])
+          .setHTML("<h1>Dallas Founder's Square</h1><br><p>Codeup Rocks!</p>")
+          .addTo(map);
+
+  // add popup to marker
+  var codeup = new mapboxgl.Popup()
+          .setHTML("<p>Founder's Square!</p>")
+
+  marker.setPopup(codeup)
+
+  // the geocode method from mapbox-geocoder-utils.js
+  geocode("900 Jackson St #410 Dallas, TX 78205", MAPBOX_TOKEN).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(17);
+  });
+
+
+  // the reverse geocode method from mapbox-geocode-utils.js
+  reverseGeocode({lng: -96.80326973598717, lat: 32.77802470416557}, MAPBOX_TOKEN).then(function(results) {
+    // logs the address for Founder's Square
+    console.log(results);
+  });
+
+  var accessToken = MAPBOX_TOKEN;
+
+  mapboxgl.accessToken = accessToken;
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4916, 29.4252]
+  });
+
+  var alamoInfo = {
+    address: "300 Alamo Plaza, San Antonio, Tx 28205",
+    popupHTML: "<p>Remember the Alamo!</p>"
+  };
+
+  function placeMarkerAndPopup(info, token, map) {
+    geocode(info.address, token).then(function(coordinates) {
+      var popup = new mapboxgl.Popup()
+              .setHTML(info.popupHTML);
+      var marker = new mapboxgl.Marker()
+              .setLngLat(coordinates)
+              .addTo(map)
+              .setPopup(popup);
+      popup.addTo(map);
+    });
+  }
+
+  placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+
+
+</script>
 </body>
 </html>
