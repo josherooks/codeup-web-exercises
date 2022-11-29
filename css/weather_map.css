@@ -1,0 +1,41 @@
+#map {
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    border: outset 9px lightgrey;
+
+}
+
+.geocoder {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    /*left: 50%;*/
+    margin-left: 2%;
+    top: 10px;
+}
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+}
+
+.navbar{
+    background-image: url("../images/snow-forest.jpg");
+    background-size: inherit;
+}
+
+.navbar-brand{
+    margin: auto;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 64px;
+}
+
+body {
+    background-image: url("../images/snow-forest.jpg");
+}
+
+.card{
+    background-color: rgba(69,70,77, 0.8);
+    border: solid 2px grey
+
+}
+
