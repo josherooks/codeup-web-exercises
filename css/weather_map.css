@@ -1,8 +1,11 @@
 #map {
-    width: 80%;
-    height: 550px;
-    margin: auto;
-    border: outset 9px lightgrey;
+    width: 50%;
+    height: 500px;
+    /*margin: auto;*/
+    /*border: solid 3px lightgrey;*/
+    border: solid 2px grey;
+
+    border-radius: 10px;
 
 }
 
@@ -19,23 +22,37 @@
 }
 
 .navbar{
-    background-image: url("../images/snow-forest.jpg");
-    background-size: inherit;
+    /*background-image: url("../images/snow-forest.jpg");*/
+    /*background-size: inherit;*/
+    background-color: darkslategrey;
+
 }
 
 .navbar-brand{
     margin: auto;
     font-family: 'Mountains of Christmas', cursive;
-    font-size: 64px;
+    font-size: 60px;
 }
 
 body {
-    background-image: url("../images/snow-forest.jpg");
+    /*background-image: url("../images/snow-falling-bg.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    background-color: dimgrey;
 }
 
-.card{
-    background-color: rgba(69,70,77, 0.8);
-    border: solid 2px grey
-
+#top-container{
+        display: flex;
+        flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.temp{
+    font-size: 40px;
+}
+
+.hwp{
+    font-size: 24px;
+}
+
 

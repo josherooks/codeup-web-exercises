@@ -37,12 +37,11 @@
                     "<th>" + item.title + "</th>" +
                     "<th>" + item.quantity + "</th>" +
                     "<th>" + item.price + "</th>" +
-                    "<th>" + item.categories + "</th>" +
+                    "<th>" + item.categories.join(', ') + "</th>" +
 
                     + "</tr>");
             });
             console.log(data);
-            console.log(status);
         });
 
 
